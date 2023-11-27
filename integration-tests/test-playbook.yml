@@ -1,0 +1,10 @@
+---
+- name: This is a hello-world example
+  hosts: localhost
+  vars:
+    testfile_name: /tmp/testfile.txt
+  tasks:
+    - name: Create a file called '{{ testfile_name }}' with the content 'hello world'
+      copy:
+        content: hello world
+        dest: "{{ testfile_name }}"
